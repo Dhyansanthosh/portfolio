@@ -35,6 +35,23 @@ export default function Navbar({ owner }) {
             ))}
           </ul>
         </div>
+
+        <div className="mt-2 flex gap-2 overflow-x-auto pb-1 md:hidden">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              smooth
+              duration={650}
+              offset={-95}
+              spy
+              activeClass="border-blue-300/50 text-blue-200"
+              className="shrink-0 cursor-pointer rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-slate-300 transition hover:text-white"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
       </nav>
     </header>
   );

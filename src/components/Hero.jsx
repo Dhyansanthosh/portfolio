@@ -29,9 +29,9 @@ export default function Hero({ owner }) {
   };
 
   return (
-    <section className="relative flex min-h-[calc(100vh-6rem)] items-center py-14" ref={heroRef}>
-      <div className="grid w-full items-center gap-10 lg:grid-cols-[1fr_320px]">
-        <div className="relative rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-xl sm:p-9" onMouseMove={onMouseMove}>
+    <section className="relative flex min-h-[calc(100svh-7rem)] items-center py-10 sm:min-h-[calc(100svh-6rem)] sm:py-14" ref={heroRef}>
+      <div className="grid w-full items-center gap-8 lg:grid-cols-[1fr_320px] lg:gap-10">
+        <div className="relative rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl sm:p-9" onMouseMove={onMouseMove}>
           <div
             className="pointer-events-none absolute inset-0 rounded-3xl"
             style={{
@@ -39,10 +39,10 @@ export default function Hero({ owner }) {
             }}
           />
           <p className="hero-item relative text-xs uppercase tracking-[0.22em] text-blue-300">Elite Backend Portfolio</p>
-          <h1 className="hero-item relative mt-4 text-4xl font-bold tracking-tight text-white sm:text-6xl">{owner.name}</h1>
+          <h1 className="hero-item relative mt-4 text-3xl font-bold tracking-tight text-white sm:text-6xl">{owner.name}</h1>
           <p className="hero-item relative mt-3 text-base text-slate-300 sm:text-lg">{owner.degree}</p>
-          <p className="hero-item relative mt-2 text-lg font-semibold text-slate-100 sm:text-2xl">{owner.role}</p>
-          <p className="hero-item relative mt-4 min-h-8 text-lg text-blue-200 sm:text-xl">
+          <p className="hero-item relative mt-2 text-base font-semibold text-slate-100 sm:text-2xl">{owner.role}</p>
+          <p className="hero-item relative mt-4 min-h-8 text-base text-blue-200 sm:text-xl">
             <TypingText texts={owner.typedRoles} />
           </p>
 
@@ -65,13 +65,13 @@ export default function Hero({ owner }) {
             ))}
           </m.ul>
 
-          <div className="hero-item relative mt-8 flex flex-wrap gap-3">
+          <div className="hero-item relative mt-8 flex flex-wrap gap-2.5 sm:gap-3">
             <Link
               to="projects"
               smooth
               duration={700}
               offset={-75}
-              className="cursor-pointer rounded-lg border border-blue-300/50 bg-blue-500/30 px-4 py-2 text-sm font-semibold text-white shadow-[0_0_20px_rgba(59,130,246,0.35)] transition hover:bg-blue-500/45"
+              className="cursor-pointer rounded-lg border border-blue-300/50 bg-blue-500/30 px-3 py-2 text-xs font-semibold text-white shadow-[0_0_20px_rgba(59,130,246,0.35)] transition hover:bg-blue-500/45 sm:px-4 sm:text-sm"
             >
               View Projects
             </Link>
@@ -82,7 +82,7 @@ export default function Hero({ owner }) {
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-lg border border-white/20 bg-black/20 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-blue-300/45"
+                className="rounded-lg border border-white/20 bg-black/20 px-3 py-2 text-xs font-medium text-slate-100 transition hover:border-blue-300/45 sm:px-4 sm:text-sm"
               >
                 {link.label}
               </a>
@@ -91,7 +91,7 @@ export default function Hero({ owner }) {
             <a
               href={owner.resumeHref}
               download
-              className="inline-flex items-center gap-2 rounded-lg border border-violet-300/35 bg-violet-500/20 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:border-violet-200/60"
+              className="inline-flex items-center gap-2 rounded-lg border border-violet-300/35 bg-violet-500/20 px-3 py-2 text-xs font-semibold text-violet-100 transition hover:border-violet-200/60 sm:px-4 sm:text-sm"
             >
               <Download size={16} />
               Resume Download
@@ -99,8 +99,8 @@ export default function Hero({ owner }) {
           </div>
         </div>
 
-        <div className="hero-item mx-auto w-full max-w-[300px] rounded-3xl border border-white/10 bg-white/5 p-3 backdrop-blur-xl">
-          <img src={owner.avatar} alt={owner.name} className="h-[360px] w-full rounded-2xl object-cover object-top" />
+        <div className="hero-item mx-auto w-full max-w-[270px] rounded-3xl border border-white/10 bg-white/5 p-3 backdrop-blur-xl sm:max-w-[300px]">
+          <img src={owner.avatar} alt={owner.name} className="h-[300px] w-full rounded-2xl object-cover object-top sm:h-[360px]" />
           <p className="mt-3 text-center text-sm text-slate-300">{owner.location}</p>
         </div>
       </div>

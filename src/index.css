@@ -26,6 +26,7 @@ body {
   color: #e5e7eb;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -54,4 +55,21 @@ body {
 .social-btn:hover {
   border-color: rgba(147, 197, 253, 0.55);
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-height: 560px) and (orientation: landscape) {
+  html {
+    font-size: 14px;
+  }
+
+  .hero-item {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
 }

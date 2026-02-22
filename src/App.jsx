@@ -29,7 +29,7 @@ export default function App() {
       <AnimatedBackground />
       <Navbar owner={portfolioData.owner} />
 
-      <main className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-20 pt-20 sm:px-7 lg:px-10 lg:pt-24">
+      <main className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-20 pt-28 sm:px-7 md:pt-24 lg:px-10 lg:pt-24">
         <Element name="home">
           <Hero owner={portfolioData.owner} />
         </Element>
